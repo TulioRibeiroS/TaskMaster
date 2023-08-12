@@ -45,8 +45,8 @@ const Header = (props: any) => {
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
       >
-        <Link href="/add-task">Adicione uma tarefa</Link>
-        <Link href="/list-task">Lista de Tarefas</Link>
+        <Link href="add-task">Adicione uma tarefa</Link>
+        <Link href="list-task">Lista de Tarefas</Link>
       </Stack>
 
       <Box
