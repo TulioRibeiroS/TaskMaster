@@ -1,18 +1,21 @@
+/* eslint-disable prefer-const */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createClient } from "@supabase/supabase-js";
-import { Columns,ColumnsInsert, Database } from "./types";
+import { Columns, Database } from "./types";
 
 export const supabase = createClient<Database>(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_KEY
 );
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getTasks = async (): Promise<any> => {
   let { data: TaskManager, error } = await supabase
     .from("TaskManager")
     .select("*");
-
   return { TaskManager, error };
 };
+
 export const insertTasks = async (value: any): Promise<any> => {
   const { data, error } = await supabase
     .from("TaskManager")
