@@ -1,7 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/list-task", "destination": "/src/pages/list" },
-    { "source": "/add-task", "destination": "/src/pages/form" },
-    { "source": "/(.*)", "destination": "/src/" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
