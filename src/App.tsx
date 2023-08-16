@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import CardGrid from "./pages/list";
 import Form from "./pages/form";
 import Header from "./Components/Header";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="list-task" element={<CardGrid />} />
         <Route path="add-task" element={<Form />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
